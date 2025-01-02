@@ -19,7 +19,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from datasets import load_dataset
 
-base_model_id = "Llama-3.1-Korean-8B-Instruct"
+base_model_id = "sh2orc/Llama-3.1-Korean-8B-Instruct"
 # dataset_name = "scooterman/guanaco-llama3-1k"
 
 
@@ -65,7 +65,7 @@ peft_config = LoraConfig(
 model = get_peft_model(model, peft_config)
 
 tokenizer = AutoTokenizer.from_pretrained(
-    "Llama-3.1-Korean-8B-Instruct",
+    "sh2orc/Llama-3.1-Korean-8B-Instruct",
     add_eos_token=True,
     add_bos_token=True, 
 )
