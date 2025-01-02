@@ -5,7 +5,7 @@ import torch
 model = "merged"
 messages = [{"role": "user", "content": "What is a large language model?"}]
 
-tokenizer = AutoTokenizer.from_pretrained(model)
+tokenizer = AutoTokenizer.from_pretrained("Llama-3.1-Korean-8B-Instruct")
 prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 pipeline = transformers.pipeline(
     "text-generation",
